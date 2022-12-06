@@ -55,13 +55,6 @@ body {
 .text-header {
   text-align: center;
   padding: 30px;
-  h1 {
-    color: $indigo-color;
-    text-shadow: 1px 1px $light-color;
-    font-size: 35px;
-    font-weight: 700;
-    margin-bottom: 10px;
-  }
   hr {
     margin: auto;
     width: 50%;
@@ -73,6 +66,22 @@ body {
     font-size: 20px;
     margin-bottom: 50px;
   }
+}
+
+@mixin judul($color, $shadow) {
+  color: $color;
+  text-shadow: 1px 1px $light-color;
+  font-size: 35px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.judul-header {
+  @include judul($indigo-color, $light-color);
+}
+
+.judul-product {
+  @include judul($light-color, $indigo-color);
 }
 
 .button-basic {
@@ -144,10 +153,52 @@ body {
   }
 }
 
-.produk {
-  background-color: $red-color;
-  color: $light-color;
-  height: 100px;
+.product {
+  background-color: $indigo-color;
+}
+
+.image-style {
+  border-radius: 25px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.product-body {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-around;
+  margin-top: 32px;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+  .product-item {
+    background-color: $light-color;
+    color: $gray;
+    box-shadow: 0 4px 8px 0 $gray;
+    margin: 16px;
+    border-radius: 10px;
+    width: 340px;
+
+    img {
+      width: 90%;
+      @extend .image-style;
+    }
+    .product-content {
+      padding: 20px;
+      margin-top: 20px;
+    }
+    .product-footer {
+      padding: 20px;
+      margin-top: 10px;
+    }
+    @media screen and (max-width: 800px) {
+      width: 100%;
+    }
+  }
 }
 
 .kontak {

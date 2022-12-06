@@ -180,7 +180,7 @@ body {
 }
 .product-body .product-item .product-footer {
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 800px) {
   .product-body .product-item {
@@ -198,6 +198,4 @@ footer {
   background-color: #f7fafc;
   color: #4a5568;
   height: 75px;
-}
-
-/*# sourceMappingURL=css-output.css.map */
+}/*# sourceMappingURL=sass-input.css.map */
