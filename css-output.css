@@ -86,10 +86,47 @@ body {
   background-color: #718096;
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 20px;
+}
+
+.item-sepertiga {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
+
+.item-duapertiga {
+  grid-column-start: 2;
+  grid-column-end: 3;
+}
+
 .tentang {
-  background-color: #f7fafc;
+  background-image: linear-gradient(to bottom right, #ddd, #f7fafc);
+  height: 400px;
+}
+.tentang img {
+  border-radius: 100%;
+  padding: 20px;
+  width: 300px;
+  height: 300px;
+}
+.tentang h1 {
   color: #3c366b;
-  height: 100px;
+  text-shadow: 1px 1px #f7fafc;
+  font-size: 46px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.tentang h2 {
+  color: #e74c3c;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+.tentang p {
+  color: #4a5568;
+  font-size: 20px;
 }
 
 .produk {
