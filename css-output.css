@@ -5,7 +5,7 @@ body {
 
 .navbar {
   background-color: #f7fafc;
-  height: 50px;
+  overflow: hidden;
 }
 .navbar a {
   color: #4a5568;
@@ -31,6 +31,16 @@ body {
   padding: 5px;
 }
 
+@media screen and (max-width: 800px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+  .navbar .right {
+    float: none;
+    width: 100%;
+  }
+}
 .header {
   background-image: url("images/logo-pupr.png");
   height: 400px;
@@ -76,12 +86,12 @@ body {
 
 .button-basic, .button-secondary, .button-primary {
   border: none;
-  padding: 15px 30px;
+  padding: 15px 15px;
   text-align: center;
   font-size: 20px;
   cursor: pointer;
   color: white;
-  font-family: "Poiret one", "Cursive";
+  font-family: "Poiret one", Cursive;
   text-decoration: none;
   border-radius: 8px;
   margin-top: 30px;
@@ -96,24 +106,39 @@ body {
 }
 
 .grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 20px;
+  box-sizing: border-box;
 }
 
 .item-sepertiga {
-  grid-column-start: 1;
-  grid-column-end: 2;
+  width: 33%;
+  float: left;
+}
+@media screen and (max-width: 800px) {
+  .item-sepertiga {
+    float: none;
+    width: 100%;
+  }
 }
 
 .item-duapertiga {
-  grid-column-start: 2;
-  grid-column-end: 3;
+  width: 66%;
+  float: left;
+}
+@media screen and (max-width: 800px) {
+  .item-duapertiga {
+    float: none;
+    width: 100%;
+  }
 }
 
 .tentang {
   background-image: linear-gradient(to bottom right, #ddd, #f7fafc);
   height: 400px;
+}
+@media screen and (max-width: 800px) {
+  .tentang {
+    text-align: center;
+  }
 }
 .tentang img {
   border-radius: 100%;
@@ -154,7 +179,7 @@ body {
   display: flex;
   align-items: stretch;
   justify-content: space-around;
-  margin-top: 32px;
+  margin-top: 20px;
   margin-left: 10vw;
   margin-right: 10vw;
 }
@@ -180,7 +205,7 @@ body {
 }
 .product-body .product-item .product-footer {
   padding: 20px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 @media screen and (max-width: 800px) {
   .product-body .product-item {
