@@ -214,9 +214,37 @@ body {
 }
 
 .kontak {
-  background-color: #f7fafc;
+  background-image: url("images/logo-pupr.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 50px;
+}
+.kontak .info {
+  width: 50%;
+  background-color: #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  text-align: justify;
+  border-radius: 10px;
+}
+@media screen and (max-width: 800px) {
+  .kontak .info {
+    width: 75%;
+  }
+}
+.kontak .info i {
+  color: #e74c3c;
+  font-size: 30px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.kontak .info h1 {
   color: #4a5568;
-  height: 100px;
+  size: 35px;
 }
 
 footer {
